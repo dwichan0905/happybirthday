@@ -1,14 +1,14 @@
 // trigger to play music in the background with sweetalert
 window.addEventListener('load', () => {
   Swal.fire({
-    title: 'Do you want to play music in the background?',
+    title: 'Sebelum mulai, maukah kamu memutar musiknya di latar belakang halaman ini?',
     // text: "You won't be able to revert this!",
-    icon: 'warning',
+    icon: 'info',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
-    confirmButtonText: 'Yes',
-    cancelButtonText: 'No',
+    confirmButtonText: 'Iya, putar saja',
+    cancelButtonText: 'Tidak',
   }).then((result) => {
     if (result.isConfirmed) {
       document.querySelector('.song').play();
@@ -97,7 +97,7 @@ const animationTimeline = () => {
     })
     .staggerTo(
       ".hbd-chatbox span",
-      1.5, {
+      1, {
         visibility: "visible",
       },
       0.05
@@ -273,23 +273,23 @@ const animationTimeline = () => {
 }
 
 // Import the data to customize and insert them into page
-const fetchData = () => {
-  fetch("customize.json")
-    .then(data => data.json())
-    .then(data => {
-      Object.keys(data).map(customData => {
-        if (data[customData] !== "") {
-          if (customData === "imagePath") {
-            document
-              .getElementById(customData)
-              .setAttribute("src", data[customData]);
-          } else {
-            document.getElementById(customData).innerText = data[customData];
-          }
-        }
-      });
-    });
-};
+// const fetchData = () => {
+//   fetch("customize.json")
+//     .then(data => data.json())
+//     .then(data => {
+//       Object.keys(data).map(customData => {
+//         if (data[customData] !== "") {
+//           if (customData === "imagePath") {
+//             document
+//               .getElementById(customData)
+//               .setAttribute("src", data[customData]);
+//           } else {
+//             document.getElementById(customData).innerText = data[customData];
+//           }
+//         }
+//       });
+//     });
+// };
 
 // Run fetch and animation in sequence
 const resolveFetch = () => {
