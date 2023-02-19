@@ -1,7 +1,7 @@
 // trigger to play music in the background with sweetalert
 window.addEventListener('load', () => {
   Swal.fire({
-    title: 'Sebelum mulai, maukah kamu memutar musiknya di latar belakang halaman ini?',
+    title: 'Sebelum mulai, maukah kamu memutar musiknya di latar belakang halaman ini, Mel?',
     // text: "You won't be able to revert this!",
     icon: 'info',
     showCancelButton: true,
@@ -28,11 +28,11 @@ const animationTimeline = () => {
 
   textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
     .split("")
-    .join("</span><span>")}</span`;
+    .join("</span><span>")}</span>`;
 
   hbd.innerHTML = `<span>${hbd.innerHTML
     .split("")
-    .join("</span><span>")}</span`;
+    .join("</span><span>")}</span>`;
 
   const ideaTextTrans = {
     opacity: 0,
