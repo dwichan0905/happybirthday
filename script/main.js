@@ -1,3 +1,19 @@
+// The wake lock sentinel.
+let wakeLock = null;
+
+// Function that attempts to request a screen wake lock.
+const requestWakeLock = async () => {
+  try {
+    wakeLock = await navigator.wakeLock.request();
+    wakeLock.addEventListener('release', () => {
+      console.log('Screen Wake Lock released:', wakeLock.released);
+    });
+    console.log('Screen Wake Lock released:', wakeLock.released);
+  } catch (err) {
+    console.error(`${err.name}, ${err.message}`);
+  }
+};
+
 // trigger to play music in the background with sweetalert
 window.addEventListener('load', () => {
   Swal.fire({
@@ -9,9 +25,11 @@ window.addEventListener('load', () => {
     cancelButtonText: 'Tidak',
   }).then((result) => {
     if (result.isConfirmed) {
+      requestWakeLock();
       document.querySelector('.song').play();
       resolveFetch().then(animationTimeline());
     } else {
+      requestWakeLock();
       document.querySelector('.song').pause();
       resolveFetch().then(animationTimeline());
     }
