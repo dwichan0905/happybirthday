@@ -1,12 +1,10 @@
 // trigger to play music in the background with sweetalert
 window.addEventListener('load', () => {
   Swal.fire({
-    title: 'Sebelum mulai, maukah kamu memutar musiknya di latar belakang halaman ini, Mel?',
-    // text: "You won't be able to revert this!",
-    icon: 'info',
+    title: '♪ Musik ♪',
+    text: "Sebelum mulai, maukah kamu memutar musiknya di latar belakang halaman ini, Mel?",
+    icon: 'question',
     showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
     confirmButtonText: 'Iya, putar saja',
     cancelButtonText: 'Tidak',
   }).then((result) => {
@@ -14,6 +12,7 @@ window.addEventListener('load', () => {
       document.querySelector('.song').play();
       resolveFetch().then(animationTimeline());
     } else {
+      document.querySelector('.song').pause();
       resolveFetch().then(animationTimeline());
     }
   });
@@ -272,29 +271,11 @@ const animationTimeline = () => {
   });
 }
 
-// Import the data to customize and insert them into page
-// const fetchData = () => {
-//   fetch("customize.json")
-//     .then(data => data.json())
-//     .then(data => {
-//       Object.keys(data).map(customData => {
-//         if (data[customData] !== "") {
-//           if (customData === "imagePath") {
-//             document
-//               .getElementById(customData)
-//               .setAttribute("src", data[customData]);
-//           } else {
-//             document.getElementById(customData).innerText = data[customData];
-//           }
-//         }
-//       });
-//     });
-// };
-
-// Run fetch and animation in sequence
+// Run animation in sequence
 const resolveFetch = () => {
   return new Promise((resolve, reject) => {
-    fetchData();
+    console.log("Web ini sangat khusus untuk Amelliya Febriyani yang sedang berulang tahun pada 28 Februari.");
+    console.log("Dibuat dengan ♥ oleh Dwi Candra Permana");
     resolve("Fetch done!");
   });
 };
