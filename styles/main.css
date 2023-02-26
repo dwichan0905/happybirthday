@@ -1,3 +1,4 @@
+
 html {
   box-sizing: border-box;
 }
@@ -83,7 +84,7 @@ body {
 }
 
 .five .idea-5 {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 .idea-5 span, .idea-6 span, .wish-hbd span {
@@ -91,7 +92,7 @@ body {
 }
 
 .idea-6 span{
-  font-size: 12rem;
+  font-size: 15rem;
 }
 
 
@@ -103,16 +104,17 @@ body {
 
 .six img {
   display: inline-block;
-  /* height: 350px; */
+  height: 350px;
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
 }
 
 .six .hat {
   left: 41.5%;
+  padding-left: 10%;
   position: absolute;
   /* transform: scale(0.1); */
-  top: 35%;
+  top: -35%;
   width: 80px;
 }
 
@@ -210,7 +212,7 @@ body {
 }
 
 .wish h5 {
-  font-size: 18px;
+  font-size: 2rem;
   font-weight: lighter;
   margin: 10px 0 0;
 }
@@ -264,8 +266,8 @@ body {
     right: 5px;
   }
 
-  .idea-5 {
-    font-size: 3rem;
+  .five .idea-5 {
+    font-size: 2rem;
   }
 
   .idea-5 span {
@@ -279,6 +281,13 @@ body {
   .six .hat {
     top: -80px;
     width: 80px;
+  }
+
+  .six img {
+    display: inline-block;
+    /* height: 350px; */
+    max-width: 100%;
+    height: auto;
   }
 
   .wish-hbd {
