@@ -294,6 +294,7 @@ const resolveFetch = () => {
   return new Promise((resolve, reject) => {
     console.log("Web ini sangat khusus untuk Amelliya Febriyani yang sedang berulang tahun pada 28 Februari.");
     console.log("Dibuat dengan ♥ oleh Dwi Candra Permana");
+    console.log("Aku cuma bisa berharap ke Allah kalau kamu orang yang tepat buat aku, Mel 🥺");
     resolve("Fetch done!");
   });
 };
